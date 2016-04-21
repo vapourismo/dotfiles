@@ -29,7 +29,3 @@ for m in $(bspc query -M); do
 	done
 done
 
-
-# Xmodmap
-XMODMAP_FILE="$HOME/.Xmodmap"
-test -e $XMODMAP_FILE && xmodmap $XMODMAP_FILE
