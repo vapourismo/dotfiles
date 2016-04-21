@@ -1,0 +1,4 @@
+#!/bin/sh
+cd $HOME
+git commit -am "$(date)" --no-status
+git push origin master
