@@ -1,0 +1,9 @@
+[Unit]
+Description=Dunst Notification
+
+[Service]
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/dunst -config ${HOME}/.config/dunst/dunstrc
+
+[Install]
+WantedBy=default.target

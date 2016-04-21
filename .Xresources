@@ -1,0 +1,17 @@
+! Urxvt
+urxvt.loginShell: 			false
+urxvt.scrollBar: 			false
+urxvt.secondaryScroll: 			true
+urxvt.saveLines: 			65535
+urxvt.cursorBlink: 			false
+urxvt.url-launcher: 		/usr/bin/chromium
+urxvt.matcher.button: 		1
+urxvt.font: 				xft:Iosevka:size=10
+urxvt.cursorColor: 			#DCDCCC
+urxvt.background: 			#111111
+urxvt.foreground: 			#d0d0d0
+urxvt.innerBorder:          6
+
+! Cursor
+Xcursor.theme: Adwaita
+Xcursor.size: 8

@@ -1,0 +1,16 @@
+[Unit]
+Description=Configure Xorg
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/xrdb -merge ${HOME}/.Xresources
+ExecStart=/usr/bin/setxkbmap gb
+ExecStart=/usr/bin/xsetroot -cursor_name left_ptr
+ExecStart=/usr/bin/xset -dpms
+ExecStart=/usr/bin/xset m 4
+ExecStart=/usr/bin/xset r rate 300 25
+
+[Install]
+WantedBy=default.target

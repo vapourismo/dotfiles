@@ -1,0 +1,10 @@
+[Unit]
+Description=Prevent tearing on NVidia cards
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/nvidia-settings -a GPUPowerMizerMode=1
+
+[Install]
+WantedBy=default.target

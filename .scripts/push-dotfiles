@@ -1,0 +1,12 @@
+#!/bin/sh
+
+repos=("$HOME/.config/sublime-text-3/Packages/User")
+
+for repo in ${!repos[*]}; do 
+	pushd ${repos[$repo]}
+	
+	git commit -am "$(date +%c)"
+	git push
+
+	popd
+done

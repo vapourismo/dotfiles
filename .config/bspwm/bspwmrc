@@ -1,0 +1,35 @@
+#!/bin/sh
+
+BSPC_COL_NORMAL="#d5d5d5"
+BSPC_COL_SELECTED="#96373C"
+BSPC_COL_URGENT="#c74528"
+
+# # Configuration
+bspc config split_ratio                0.5
+bspc config window_gap                 5
+bspc config borderless_monocle         false
+bspc config gapless_monocle            true
+bspc config pointer_follows_monitor    false
+bspc config auto_alternate             false
+bspc config auto_cancel                false
+bspc config history_aware_focus        true
+bspc config normal_border_color        $BSPC_COL_NORMAL
+bspc config active_border_color        $BSPC_COL_NORMAL
+bspc config focused_border_color       $BSPC_COL_SELECTED
+bspc config presel_feedback_color      $BSPC_COL_SELECTED
+bspc config urgent_border_color        $BSPC_COL_URGENT
+
+# Monitor setup
+for m in $(bspc query -M); do
+	bspc config -m $m border_width 2
+	bspc desktop $(bspc query -m $m -D) -n "$m-1"
+
+	for d in $(seq 2 4); do
+		bspc monitor $m -a "$m-$d"
+	done
+done
+
+
+# Xmodmap
+XMODMAP_FILE="$HOME/.Xmodmap"
+test -e $XMODMAP_FILE && xmodmap $XMODMAP_FILE

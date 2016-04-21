@@ -1,0 +1,60 @@
+#!/bin/sh
+desktop() {
+	cur_monitor=$(bspc query -M -m focused)
+	case $1 in
+		next|prev)
+			for m in $(bspc query -M); do
+				bspc monitor -f $m
+				bspc desktop -f $1
+			done
+		;;
+
+		*)
+			for m in $(bspc query -M); do
+				bspc monitor -f $m
+				bspc desktop -f "$m-$1"
+			done
+		;;
+	esac
+	bspc monitor -f $cur_monitor
+}
+
+to_desktop() {
+	bspc node -d $(bspc query -M -n focused)-$1
+}
+
+node() {
+	bspc node -f $1 || bspc monitor -f $1
+}
+
+move_window() {
+	if bspc query -N -n $1; then
+		bspc node -n $1
+	else
+		winid=$(bspc query -N -n focused)
+		bspc node -m $1
+		bspc node -f $winid
+	fi
+}
+
+case $1 in
+	desktop)
+		desktop $2
+	;;
+
+	to-desktop)
+		to_desktop $2
+	;;
+
+	node)
+		node $2
+	;;
+
+	move-node)
+		move_window $2
+	;;
+
+	*)
+
+	;;
+esac

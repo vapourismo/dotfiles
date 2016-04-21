@@ -1,0 +1,162 @@
+## Desktop Adjustment
+super + g
+	bspc node @focused:/ -R 90
+
+super + m
+	bspc desktop -l next
+
+super + b
+	bspc node @focused:/ -B
+
+## Desktop Selection
+super + 1
+	~/.scripts/bspwmc desktop 1
+
+super + 2
+	~/.scripts/bspwmc desktop 2
+
+super + 3
+	~/.scripts/bspwmc desktop 3
+
+super + 4
+	~/.scripts/bspwmc desktop 4
+
+super + shift + 1
+	~/.scripts/bspwmc to-desktop 1
+
+super + shift + 2
+	~/.scripts/bspwmc to-desktop 2
+
+super + shift + 3
+	~/.scripts/bspwmc to-desktop 3
+
+super + shift + 4
+	~/.scripts/bspwmc to-desktop 4
+
+## Window Modifications
+super + w
+	bspc node -c
+
+super + f
+	bspc node -t "~floating"
+
+super + shift + f
+	bspc node -t "~fullscreen"
+
+super + alt + Left
+	bspc node @west -r -20
+
+super + alt + Right
+	bspc node @east -r +20
+
+super + alt + Up
+	bspc node @north -r -20
+
+super + alt + Down
+	bspc node @south -r +20
+
+## Window Selection
+super + Tab
+	bspc node -f last
+
+alt + Tab
+	bspc node -f next
+
+super + Left
+	~/.scripts/bspwmc node west
+
+super + Right
+	~/.scripts/bspwmc node east
+
+super + Up
+	~/.scripts/bspwmc node north
+
+super + Down
+	~/.scripts/bspwmc node south
+
+super + shift + Left
+	~/.scripts/bspwmc move-node west
+
+super + shift + Right
+	~/.scripts/bspwmc move-node east
+
+super + shift + Up
+	~/.scripts/bspwmc move-node north
+
+super + shift + Down
+	~/.scripts/bspwmc move-node south
+
+super + ctrl + Left
+	bspc node -p west
+
+super + ctrl + Right
+	bspc node -p east
+
+super + ctrl + Up
+	bspc node -p north
+
+super + ctrl + Down
+	bspc node -p south
+
+super + BackSpace
+	bspc node -p cancel
+
+super + z
+	bspc node -n last.manual
+
+## Mouse
+~button1
+	bspc pointer -g focus
+
+super + button{1-3}
+	bspc pointer -g {move,resize_side,resize_corner}
+
+super + !button{1-3}
+	bspc pointer -t %i %i
+
+button8
+	~/.scripts/bspwmc desktop next
+
+button9
+	~/.scripts/bspwmc desktop prev
+
+shift + button8
+	bspc node -d next
+
+shift + button9
+	bspc node -d prev
+
+## Shortcuts wm independent hotkeys
+{super + Return, XF86Launch7}
+	gnome-terminal
+
+{super + i, XF86Launch8}
+	chromium
+
+{super + t, XF86Launch9}
+	thunar
+
+super + r
+	dmenu_run -i -sb '#af3838' -sf '#d2d2d2' -nb '#111111' -nf '#d2d2d2' -fn 'inconsolata-10'
+
+super + Escape
+	pkill -USR1 -x sxhkd
+
+super + shift + Escape
+	bspc quit
+
+super + F9
+	mpc toggle
+
+super + F7
+	mpc next
+
+super + F6
+	mpc prev
+
+super + F5
+	mpc volume -5
+
+super + F8
+	mpc volume +5
+
