@@ -21,7 +21,6 @@ bspc config urgent_border_color        $BSPC_COL_URGENT
 
 # Monitor setup
 for m in $(bspc query -M); do
-	bspc config -m $m border_width 2
 	bspc desktop $(bspc query -m $m -D) -n "$m-1"
 
 	for d in $(seq 2 4); do
@@ -29,3 +28,6 @@ for m in $(bspc query -M); do
 	done
 done
 
+for d in $(bspc query -D); do
+	bspc config -d $d border_width 2
+done
