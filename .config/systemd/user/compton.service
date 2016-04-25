@@ -3,7 +3,7 @@ Description=Compton Compositor
 
 [Service]
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/compton -cC --vsync opengl --refresh-rate 60 --config ${HOME}/.compton.conf
+ExecStart=/usr/bin/compton -cC --config ${HOME}/.compton.conf
 
 [Install]
 WantedBy=default.target
