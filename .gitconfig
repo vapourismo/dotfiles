@@ -6,6 +6,6 @@
 [credential]
 	helper = cache --timeout 3600
 [core]
-	editor = vim
+	editor = subl3 -w
 [branch]
 	autosetuprebase = always
