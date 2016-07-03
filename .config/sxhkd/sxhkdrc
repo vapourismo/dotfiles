@@ -137,7 +137,7 @@ shift + button9
 	thunar
 
 super + r
-	dmenu_run -i -sb '#af3838' -sf '#d2d2d2' -nb '#111111' -nf '#d2d2d2' -fn 'inconsolata-10'
+	~/.scripts/dmenu
 
 super + Escape
 	pkill -USR1 -x sxhkd
