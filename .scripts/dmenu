@@ -1,17 +1,19 @@
 #!/bin/sh
 
 start_dmenu() {
-	dmenu -i -b -sb '#96373C' -sf '#d2d2d2' -nb '#111111' -nf '#d2d2d2' -fn 'iosevka-9' -l 5
+	cat | dmenu -i -b -sb '#96373C' -sf '#d2d2d2' -nb '#111111' -nf '#d2d2d2' -fn 'iosevka-9' -l 5 &
+	dmenu_pid=$!
+
+	current_monitor=$(bspc query -M -m focused)
+	prev_padding=$(bspc config -m $current_monitor bottom_padding)
+
+	bspc config -m $current_monitor bottom_padding 96
+	wait $dmenu_pid
+	bspc config -m $current_monitor bottom_padding $prev_padding
 }
 
 task() {
-	current_monitor=$(bspc query -M -m focused)
-	prev_padding=$(bspc config -m $current_monitor bottom_padding)
-	bspc config -m $current_monitor bottom_padding 96
-
 	dmenu_path | start_dmenu | ${SHELL:-"/bin/sh"}
-
-	bspc config -m $current_monitor bottom_padding $prev_padding
 }
 
 task&
