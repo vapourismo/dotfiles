@@ -160,3 +160,5 @@ super + F5
 super + F8
 	mpc volume +5
 
+alt + Print
+	scrot -u
