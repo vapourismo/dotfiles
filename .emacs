@@ -5,9 +5,6 @@
 (global-set-key (kbd "C-w") 'kill-buffer)
 (global-set-key (kbd "C-x") 'cua-cut-region)
 
-(setq indent-tabs-mode t)
-(setq tab-width 4)
-
 ; Windows
 (global-set-key (kbd "M-w") 'delete-window)
 (global-set-key (kbd "<M-left>") 'windmove-left)
@@ -34,15 +31,11 @@
 
 ; Theming
 (setq inhibit-startup-screen t)
-(setq linum-format " %d ")
+(setq linum-format " %05d ")
 (setq indent-tabs-mode t)
 (setq tab-width 4)
 
-(set-face-attribute 'default nil :font "Inconsolata")
+(set-face-attribute 'default nil :font "Iosevka")
 
-(custom-set-variables
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
- '(custom-enabled-themes (quote (wombat)))
- '(ido-mode (quote file) nil (ido)))
-
+(custom-set-variables '(custom-enabled-themes (quote (wombat)))
+                      '(ido-mode (quote file) nil (ido)))q

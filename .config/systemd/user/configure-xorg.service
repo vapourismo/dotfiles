@@ -6,7 +6,7 @@ Type=oneshot
 RemainAfterExit=yes
 Environment=DISPLAY=:0
 ExecStart=/usr/bin/xrdb -merge ${HOME}/.Xresources
-ExecStart=/usr/bin/setxkbmap gb
+ExecStart=/usr/bin/xmodmap ${HOME}/.Xmodmap
 ExecStart=/usr/bin/xsetroot -cursor_name left_ptr
 ExecStart=/usr/bin/xset -dpms
 ExecStart=/usr/bin/xset m 4

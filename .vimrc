@@ -24,10 +24,10 @@ filetype plugin on
 filetype plugin indent on
 
 " Save
-inoremap <C-s> <C-o>:w<CR>
+noremap <C-s> <C-o>:w<CR>
 
 " Quit
-inoremap <C-q> <C-o>:qa!<CR>
+noremap <C-q> <C-o>:qa!<CR>
 
 " Close buffer
 inoremap <C-w> <C-o>:q<CR>
