@@ -10,7 +10,7 @@ ExecStart=/usr/bin/xmodmap ${HOME}/.Xmodmap
 ExecStart=/usr/bin/xsetroot -cursor_name left_ptr
 ExecStart=/usr/bin/xset -dpms
 ExecStart=/usr/bin/xset m 4
-ExecStart=/usr/bin/xset r rate 300 25
+ExecStart=/usr/bin/xset r rate 200 25
 
 [Install]
 WantedBy=default.target
