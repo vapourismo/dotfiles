@@ -106,13 +106,13 @@ super + z
 
 ## Mouse
 ~button1
-	bspc pointer -g focus
+	bspc node -f pointed
 
-super + button{1-3}
-	bspc pointer -g {move,resize_side,resize_corner}
+# super + button{1-3}
+# 	bspc pointer -g {move,resize_side,resize_corner}
 
-super + !button{1-3}
-	bspc pointer -t %i %i
+# super + !button{1-3}
+# 	bspc pointer -t %i %i
 
 button8
 	~/.scripts/bspwmc desktop next
