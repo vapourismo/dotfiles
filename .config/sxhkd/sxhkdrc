@@ -145,19 +145,19 @@ super + Escape
 super + shift + Escape
 	bspc quit
 
-super + F9
+XF86AudioPlay
 	mpc toggle
 
-super + F7
+XF86AudioNext
 	mpc next
 
-super + F6
+XF86AudioPrev
 	mpc prev
 
-super + F5
+XF86AudioLowerVolume
 	mpc volume -5
 
-super + F8
+XF86AudioRaiseVolume
 	mpc volume +5
 
 alt + Print
