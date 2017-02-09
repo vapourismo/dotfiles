@@ -57,10 +57,10 @@ super + alt + Down
 
 ## Window Selection
 super + Tab
-	bspc node -f last
+	bspc monitor -f east || bspc monitor -f west
 
 alt + Tab
-	bspc node -f next
+	bspc node -f next.local
 
 super + Left
 	~/.scripts/bspwmc node west
