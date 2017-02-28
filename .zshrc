@@ -19,3 +19,7 @@ export PATH=$PATH:$HOME/.cabal/bin
 export CC=clang
 export CXX=clang++
 export MAKEFLAGS="-j8"
+
+# Java
+export _JAVA_AWT_WM_NONREPARENTING=1
+
