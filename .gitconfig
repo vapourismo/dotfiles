@@ -6,6 +6,7 @@
 [credential]
 	helper = cache --timeout 3600
 [core]
-	editor = subl3 -w
 [branch]
 	autosetuprebase = never
+[core]
+	editor = vim
