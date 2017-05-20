@@ -1,0 +1,22 @@
+{
+    "name": "vapou-theme",
+    "displayName": "Ole's Theme",
+    "description": "Fuck all",
+    "version": "0.0.1",
+    "publisher": "vapourismo",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Vapourismo - Color Scheme",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Color Scheme.tmTheme"
+            }
+        ]
+    }
+}
