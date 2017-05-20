@@ -1,0 +1,38 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontSize": 13,
+    "editor.fontFamily": "Iosevka",
+    "editor.insertSpaces": false,
+    "editor.rulers": [100],
+    "editor.renderLineHighlight": "gutter",
+	"files.autoSave": "onFocusChange",
+	"window.menuBarVisibility": "toggle",
+	"workbench.sideBar.location": "left",
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Vapourismo - Color Scheme",
+    "go.vetOnSave": false,
+    "go.gopath": "/data/go",
+    "go.formatOnSave": false,
+    "editor.cursorStyle": "line",
+    "files.trimTrailingWhitespace": true,
+    "guides.overrideDefault": true,
+    "guides.sendUsagesAndStats": false,
+    "guides.active.enabled": false,
+    "guides.stack.enabled": false,
+    "editor.selectionHighlight": true,
+    "go.enableCodeLens": {
+        "references": false,
+        "runtest": false
+    },
+    "editor.minimap.enabled": false,
+    "editor.occurrencesHighlight": false,
+    "editor.wordWrapColumn": 100,
+    "workbench.welcome.enabled": false,
+    "window.openFilesInNewWindow": "off",
+    "explorer.openEditors.visible": 0,
+    "workbench.iconTheme": "vs-minimal",
+    "editor.snippetSuggestions": "inline",
+    "editor.renderWhitespace": "none",
+    "go.buildOnSave": true,
+    "go.testFlags": ["-race"]
+}
