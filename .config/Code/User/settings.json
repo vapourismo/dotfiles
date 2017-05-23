@@ -34,5 +34,8 @@
     "editor.snippetSuggestions": "inline",
     "editor.renderWhitespace": "none",
     "go.buildOnSave": true,
-    "go.testFlags": ["-race"]
+    "go.testFlags": [
+        "-race"
+    ],
+    "window.zoomLevel": 0
 }

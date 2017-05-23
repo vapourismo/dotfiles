@@ -1,7 +1,7 @@
 # Completion
 zstyle :compinstall filename '/home/ole/.zshrc'
 
-autoload -Uz compinit
+autoload -Uz compiniti
 autoload -U select-word-style
 autoload zkbd
 
@@ -25,3 +25,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # 
 export GOPATH=/data/go
+
+#
+source <(kubectl completion zsh)
+source /opt/google-cloud-sdk/completion.zsh.inc
