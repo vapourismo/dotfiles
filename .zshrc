@@ -26,6 +26,5 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # 
 export GOPATH=/data/go
 
-#
-source <(kubectl completion zsh)
 source /opt/google-cloud-sdk/completion.zsh.inc
+source <(kubectl completion zsh)
