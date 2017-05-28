@@ -119,5 +119,53 @@
 	{
 		"key": "ctrl+shift+t",
 		"command": "-workbench.action.reopenClosedEditor"
+	},
+	{
+		"key": "ctrl+alt+down",
+		"command": "editor.action.moveLinesDownAction",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+down",
+		"command": "-editor.action.moveLinesDownAction",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+down",
+		"command": "-editor.action.moveLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+up",
+		"command": "-editor.action.moveLinesUpAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+alt+up",
+		"command": "editor.action.moveLinesUpAction",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+up",
+		"command": "-editor.action.moveLinesUpAction",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+up",
+		"command": "-editor.action.insertCursorAbove",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+down",
+		"command": "-editor.action.insertCursorBelow",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+down",
+		"command": "spaceBlockJumper.selectDown"
+	},
+	{
+		"key": "ctrl+shift+up",
+		"command": "spaceBlockJumper.selectUp"
 	}
 ]
