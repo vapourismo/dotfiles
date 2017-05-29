@@ -5,14 +5,14 @@
     "editor.insertSpaces": false,
     "editor.rulers": [100],
     "editor.renderLineHighlight": "gutter",
-	"files.autoSave": "onFocusChange",
-	"window.menuBarVisibility": "toggle",
-	"workbench.sideBar.location": "left",
+    "files.autoSave": "onFocusChange",
+    "window.menuBarVisibility": "toggle",
+    "workbench.sideBar.location": "left",
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Vapourismo - Color Scheme",
     "go.vetOnSave": false,
     "go.gopath": "/data/go",
-    "go.formatOnSave": false,
+    "go.formatOnSave": true,
     "editor.cursorStyle": "line",
     "files.trimTrailingWhitespace": true,
     "guides.overrideDefault": true,
@@ -38,8 +38,11 @@
         "-race"
     ],
     "window.zoomLevel": 0,
-    "haskero.intero.ghciOptions": [
-        "-Wall",
-        "-fno-warn-tabs"
+    "go.lintTool": "gometalinter",
+    "go.formatTool": "goimports",
+    "go.lintFlags": [
+        "-D", "gocyclo",
+		"-D", "vetshadow",
+        "-D", "errcheck"
     ]
 }
