@@ -10,7 +10,7 @@
     "workbench.sideBar.location": "left",
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Vapourismo - Color Scheme",
-    "go.vetOnSave": false,
+    "go.vetOnSave": true,
     "go.gopath": "/data/go",
     "go.formatOnSave": true,
     "editor.cursorStyle": "line",
@@ -38,11 +38,6 @@
         "-race"
     ],
     "window.zoomLevel": 0,
-    "go.lintTool": "gometalinter",
-    "go.formatTool": "goimports",
-    "go.lintFlags": [
-        "-D", "gocyclo",
-		"-D", "vetshadow",
-        "-D", "errcheck"
-    ]
+    "go.lintTool": "golint",
+    "go.formatTool": "goimports"
 }
