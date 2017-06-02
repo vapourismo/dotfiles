@@ -167,5 +167,9 @@
 	{
 		"key": "ctrl+shift+up",
 		"command": "spaceBlockJumper.selectUp"
+	},
+	{
+		"key": "alt+3",
+		"command": "workbench.action.focusPanel"
 	}
 ]
