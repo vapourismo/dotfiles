@@ -34,7 +34,8 @@
     "window.zoomLevel": 0,
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Vapourismo - Color Scheme",
-    "workbench.iconTheme": "vs-minimal",
     "workbench.sideBar.location": "left",
-    "workbench.welcome.enabled": false
+    "workbench.welcome.enabled": false,
+    "editor.renderIndentGuides": false,
+    "workbench.iconTheme": "vs-minimal"
 }
