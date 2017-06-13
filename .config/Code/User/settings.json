@@ -23,7 +23,7 @@
     "go.formatTool": "goimports",
     "go.gopath": "/data/go",
     "go.lintTool": "golint",
-    "go.liveErrors": {"enabled": true, "delay": 500},
+    "go.liveErrors": {"enabled": false, "delay": 500},
     "go.testFlags": ["-race"],
     "guides.active.enabled": false,
     "guides.overrideDefault": true,
