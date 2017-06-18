@@ -37,5 +37,17 @@
     "workbench.sideBar.location": "left",
     "workbench.welcome.enabled": false,
     "editor.renderIndentGuides": false,
-    "workbench.iconTheme": "vs-minimal"
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#4084D6",
+        "editorSuggestWidget.border": "#0000",
+        "editorSuggestWidget.selectedBackground": "#4084D6",
+        "editorSuggestWidget.background": "#2A2A2A",
+        "list.highlightForeground": "#FFF",
+        "editorBracketMatch.background": "#6699CC",
+        "editorBracketMatch.border": "#0000",
+        "editorLineNumber.foreground": "#71CDFF",
+        "editor.lineHighlightBackground": "#333"
+    },
+    "markdown.preview.scrollPreviewWithEditorSelection": false,
+    "markdown.preview.scrollEditorWithPreview": false
 }
