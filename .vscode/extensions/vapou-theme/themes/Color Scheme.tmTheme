@@ -10,13 +10,13 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#212121</string>
+				<string>#1A1A1A</string>
 
 				<key>caret</key>
 				<string>#bbbbbb</string>
 
 				<key>foreground</key>
-				<string>#d5d5d5</string>
+				<string>#EFEFEF</string>
 
 				<key>invisibles</key>
 				<string>#7a8288</string>

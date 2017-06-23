@@ -38,15 +38,15 @@
     "workbench.welcome.enabled": false,
     "editor.renderIndentGuides": false,
     "workbench.colorCustomizations": {
-        "statusBar.background": "#4084D6",
-        "editorSuggestWidget.border": "#0000",
-        "editorSuggestWidget.selectedBackground": "#4084D6",
-        "editorSuggestWidget.background": "#2A2A2A",
-        "list.highlightForeground": "#FFF",
+        "editor.lineHighlightBackground": "#333",
         "editorBracketMatch.background": "#6699CC",
         "editorBracketMatch.border": "#0000",
         "editorLineNumber.foreground": "#71CDFF",
-        "editor.lineHighlightBackground": "#333"
+        "editorSuggestWidget.background": "#2A2A2A",
+        "editorSuggestWidget.border": "#0000",
+        "editorSuggestWidget.selectedBackground": "#4084D6",
+        "list.highlightForeground": "#FFF",
+        "statusBar.background": "#4084D6"
     },
     "markdown.preview.scrollPreviewWithEditorSelection": false,
     "markdown.preview.scrollEditorWithPreview": false
