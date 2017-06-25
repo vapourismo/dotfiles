@@ -49,5 +49,6 @@
         "statusBar.background": "#4084D6"
     },
     "markdown.preview.scrollPreviewWithEditorSelection": false,
-    "markdown.preview.scrollEditorWithPreview": false
+    "markdown.preview.scrollEditorWithPreview": false,
+    "files.insertFinalNewline": true
 }
