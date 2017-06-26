@@ -15,7 +15,7 @@ SAVEHIST=1000
 
 # Environment
 export LUA_CPATH=$(luarocks path --lr-cpath)
-export PATH=$PATH:$HOME/.cabal/bin
+export PATH=$PATH:$HOME/.cabal/bin:$HOME/.local/bin
 export CC=clang
 export CXX=clang++
 export MAKEFLAGS="-j8"

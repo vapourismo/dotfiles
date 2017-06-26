@@ -50,5 +50,10 @@
     },
     "markdown.preview.scrollPreviewWithEditorSelection": false,
     "markdown.preview.scrollEditorWithPreview": false,
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "haskero.intero.ghciOptions": [
+        "-Wall",
+        "-Wno-unused-do-bind",
+        "-fno-warn-tabs"
+    ]
 }
