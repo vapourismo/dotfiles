@@ -7,7 +7,7 @@
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": false,
     "editor.renderLineHighlight": "gutter",
-    "editor.renderWhitespace": "none",
+    "editor.renderWhitespace": "all",
     "editor.rulers": [100],
     "editor.selectionHighlight": true,
     "editor.snippetSuggestions": "inline",
@@ -46,14 +46,11 @@
         "editorSuggestWidget.border": "#0000",
         "editorSuggestWidget.selectedBackground": "#4084D6",
         "list.highlightForeground": "#FFF",
-        "statusBar.background": "#4084D6"
+        "statusBar.background": "#4084D6",
+        "editorWhitespace.foreground": "#1a1a1a"
     },
     "markdown.preview.scrollPreviewWithEditorSelection": false,
     "markdown.preview.scrollEditorWithPreview": false,
-    "files.insertFinalNewline": true,
-    "haskero.intero.ghciOptions": [
-        "-Wall",
-        "-Wno-unused-do-bind",
-        "-fno-warn-tabs"
-    ]
+    "guides.stack.hideOnSelection": false,
+    "editor.useTabStops": true
 }
