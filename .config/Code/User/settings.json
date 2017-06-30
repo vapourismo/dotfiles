@@ -51,6 +51,5 @@
     },
     "markdown.preview.scrollPreviewWithEditorSelection": false,
     "markdown.preview.scrollEditorWithPreview": false,
-    "guides.stack.hideOnSelection": false,
-    "editor.useTabStops": true
+    "guides.stack.hideOnSelection": false
 }
