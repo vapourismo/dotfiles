@@ -51,5 +51,6 @@
     },
     "markdown.preview.scrollPreviewWithEditorSelection": false,
     "markdown.preview.scrollEditorWithPreview": false,
-    "guides.stack.hideOnSelection": false
+    "guides.stack.hideOnSelection": false,
+    "files.insertFinalNewline": true
 }
