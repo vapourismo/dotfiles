@@ -8,7 +8,9 @@
     "editor.occurrencesHighlight": false,
     "editor.renderLineHighlight": "gutter",
     "editor.renderWhitespace": "all",
-    "editor.rulers": [100],
+    "editor.rulers": [
+        100
+    ],
     "editor.selectionHighlight": true,
     "editor.snippetSuggestions": "inline",
     "editor.wordWrapColumn": 100,
@@ -18,18 +20,21 @@
     "go.buildOnSave": "workspace",
     "go.vetOnSave": "workspace",
     "go.lintOnSave": "workspace",
-    "go.enableCodeLens": {"references": false, "runtest": false},
+    "go.enableCodeLens": {
+        "references": false,
+        "runtest": false
+    },
     "go.formatOnSave": true,
     "go.formatTool": "goimports",
     "go.gopath": "/data/go",
     "go.lintTool": "golint",
-    "go.liveErrors": {"enabled": false, "delay": 500},
-    "go.testFlags": ["-race"],
-    // "guides.active.enabled": false,
-    // "guides.overrideDefault": true,
-    // "guides.sendUsagesAndStats": false,
-    // "guides.stack.enabled": false,
-    // "guides.stack.hideOnSelection": false,
+    "go.liveErrors": {
+        "enabled": false,
+        "delay": 500
+    },
+    "go.testFlags": [
+        "-race"
+    ],
     "window.menuBarVisibility": "toggle",
     "window.openFilesInNewWindow": "off",
     "window.zoomLevel": 0,
@@ -53,5 +58,6 @@
     },
     "markdown.preview.scrollPreviewWithEditorSelection": false,
     "markdown.preview.scrollEditorWithPreview": false,
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "stylishHaskell.showConsoleOnError": false
 }
