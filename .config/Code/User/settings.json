@@ -41,7 +41,6 @@
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Vapourismo - Color Scheme",
     "workbench.sideBar.location": "left",
-    "workbench.welcome.enabled": false,
     "editor.renderIndentGuides": true,
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#333",
@@ -58,6 +57,5 @@
     },
     "markdown.preview.scrollPreviewWithEditorSelection": false,
     "markdown.preview.scrollEditorWithPreview": false,
-    "files.insertFinalNewline": true,
-    "stylishHaskell.showConsoleOnError": false
+    "files.insertFinalNewline": true
 }
