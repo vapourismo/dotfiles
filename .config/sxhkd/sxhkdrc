@@ -1,0 +1,116 @@
+# Desktop Layout
+super + g
+	bspc node @focused:/ -R 90
+
+super + m
+	bspc desktop -l next
+
+super + b
+	bspc node @focused:/ -B
+
+# Desktop Selection
+super + 1
+	bspc desktop -f 1
+
+super + 2
+	bspc desktop -f 2
+
+super + 3
+	bspc desktop -f 3
+
+super + 4 
+	bspc desktop -f 4
+
+# Desktop Movement
+super + shift + 1
+	bspc node -d 1
+
+super + shift + 2
+	bspc node -d 2
+
+super + shift + 3
+	bspc node -d 3
+
+super + shift + 4
+	bspc node -d 4
+
+# Window Selection
+super + Left
+	bspc node -f west
+
+super + Right 
+	bspc node -f east
+
+super + Up
+	bspc node -f north
+
+super + Down
+	bspc node -f south
+
+alt + Tab 
+	bspc node -f prev.local
+
+# Window Movements
+super + shift + Left
+	bspc node -n west
+
+super + shift + Right 
+	bspc node -n east
+
+super + shift + Up
+	bspc node -n north
+
+super + shift + Down
+	bspc node -n south
+
+# Window Tiling
+super + ctrl + Left
+	bspc node -p west
+
+super + ctrl + Right
+	bspc node -p east
+
+super + ctrl + Up
+	bspc node -p north
+
+super + ctrl + Down
+	bspc node -p south
+
+super + BackSpace
+	bspc node -p cancel
+
+# Window Modifications
+super + w
+	bspc node -c
+
+super + f
+	bspc node -t "~floating"
+
+super + shift + f
+	bspc node -t "~fullscreen"
+
+super + alt + Left
+	bspc node @west -r -20
+
+super + alt + Right
+	bspc node @east -r +20
+
+super + alt + Up
+	bspc node @north -r -20
+
+super + alt + Down
+	bspc node @south -r +20
+
+# Programs
+super + Return
+	urxvt
+
+super + i
+	chromium
+
+super + r
+	/home/ole/.local/bin/dmenu
+
+# Misc
+super + Escape
+	pkill -USR1 -x sxhkd
