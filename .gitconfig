@@ -1,3 +1,7 @@
 [user]
 	email = ole@vprsm.de
 	name = Ole
+[alias]
+	s = status -s
+	c = commit -v
+	ca = commit -av
