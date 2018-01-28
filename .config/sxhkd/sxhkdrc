@@ -117,6 +117,24 @@ super + i
 super + r
 	/home/ole/.local/bin/dmenu
 
+super + l
+	/usr/bin/i3lock-ole
+
+XF86MonBrightnessUp
+	xbacklight -inc 10
+
+XF86MonBrightnessDown
+	xbacklight -dec 10
+
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ "-10%"	
+
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ "+10%"
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
 # Misc
 super + Escape
 	pkill -USR1 -x sxhkd
