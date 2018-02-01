@@ -127,10 +127,10 @@ XF86MonBrightnessDown
 	xbacklight -dec 10
 
 XF86AudioLowerVolume
-	pactl set-sink-volume @DEFAULT_SINK@ "-10%"	
+	pactl set-sink-volume @DEFAULT_SINK@ "-5%"
 
 XF86AudioRaiseVolume
-	pactl set-sink-volume @DEFAULT_SINK@ "+10%"
+	pactl set-sink-volume @DEFAULT_SINK@ "+5%"
 
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
