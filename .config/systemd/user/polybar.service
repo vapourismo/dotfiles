@@ -1,0 +1,10 @@
+[Unit]
+Description=Polybar
+
+[Service]
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/polybar top
+Restart=always
+
+[Install]
+WantedBy=default.target
