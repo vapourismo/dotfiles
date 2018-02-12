@@ -3,7 +3,7 @@ monitor = eDP-1
 width = 100%
 height = 25
 
-background = #000
+background = #00000000
 foreground = #d5d5d5
 
 line-color = ${bar/top.background}
@@ -23,7 +23,7 @@ modules-right = volume battery
 main-foreground = #8e9ec2
 
 [module/volume]
-type = internal/volume
+type = internal/pulseaudio
 
 format-volume = Volume <label-volume> <ramp-volume>
 format-volume-foreground = ${root.main-foreground}
