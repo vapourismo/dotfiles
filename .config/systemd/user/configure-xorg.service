@@ -4,7 +4,6 @@ Description=Configure Xorg
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-Environment=DISPLAY=:0
 ExecStart=/usr/bin/xrdb ${HOME}/.Xresources
 ExecStart=/usr/bin/xmodmap ${HOME}/.Xmodmap
 ExecStart=/usr/bin/xset m 5

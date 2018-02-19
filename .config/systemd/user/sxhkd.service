@@ -2,7 +2,6 @@
 Description=Simple X Hotkey Daemon
 
 [Service]
-Environment=DISPLAY=:0
 ExecStart=/usr/bin/sxhkd -c ${HOME}/.config/sxhkd/sxhkdrc
 
 [Install]
