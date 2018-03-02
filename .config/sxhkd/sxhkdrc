@@ -21,11 +21,8 @@ super + 3
 super + 4
 	bspc desktop -f 4
 
-button8
-	bspc desktop -f prev
-
-button9
-	bspc desktop -f next
+super + Tab
+	bspc desktop -f last
 
 # Desktop Movement
 super + shift + 1
