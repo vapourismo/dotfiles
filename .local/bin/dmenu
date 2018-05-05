@@ -1,5 +1,19 @@
 #!/bin/sh
 
+. /etc/profile.d/nix.sh
+
+paths="$(echo $PATH | sed 's/:/\n/g')"
+
+listAll() {
+	for path in $paths; do
+		test -r $path && ls -1 $path
+	done
+}
+
+listAllSorted() {
+	listAll | sort -u
+}
+
 start_dmenu() {
 	cat | dmenu -i -b -sb '#96373C' -sf '#d2d2d2' -nb '#111111' -nf '#d2d2d2' -fn 'iosevka-8' -l 5 &
 	dmenu_pid=$!
@@ -13,7 +27,7 @@ start_dmenu() {
 }
 
 task() {
-	dmenu_path | start_dmenu | ${SHELL:-"/bin/sh"}
+	listAllSorted | start_dmenu | ${SHELL:-"/bin/sh"}
 }
 
 task&

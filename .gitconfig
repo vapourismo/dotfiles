@@ -11,3 +11,5 @@
 	ml = log --oneline --author=ole@vprsm.de --no-merges
 [core]
 	editor = subl -w
+[diff]
+	algorithm = patience

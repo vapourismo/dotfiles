@@ -15,4 +15,6 @@ bspc config bottom_padding     -5
 bspc config left_padding       -5
 bspc config right_padding      -5
 
-bspc monitor -d 1 2 3 4
+for m in $(bspc query -M); do
+	bspc monitor $m -d 1 2 3 4
+done

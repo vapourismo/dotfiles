@@ -10,64 +10,58 @@ super + b
 
 # Desktop Selection
 super + 1
-	bspc desktop -f 1
+	bspc desktop -f ^2:^1 && bspc desktop -f ^1:^1
 
 super + 2
-	bspc desktop -f 2
+	bspc desktop -f ^2:^2 && bspc desktop -f ^1:^2
 
 super + 3
-	bspc desktop -f 3
+	bspc desktop -f ^2:^3 && bspc desktop -f ^1:^3
 
 super + 4
-	bspc desktop -f 4
-
-button8
-	bspc desktop -f prev
-
-button9
-	bspc desktop -f next
+	bspc desktop -f ^2:^4 && bspc desktop -f ^1:^4
 
 # Desktop Movement
 super + shift + 1
-	bspc node -d 1
+	bspc node -d focused:^1
 
 super + shift + 2
-	bspc node -d 2
+	bspc node -d focused:^2
 
 super + shift + 3
-	bspc node -d 3
+	bspc node -d focused:^3
 
 super + shift + 4
-	bspc node -d 4
+	bspc node -d focused:^4
 
 # Window Selection
 super + Left
-	bspc node -f west
+	bspc node -f west || bspc monitor -f west
 
 super + Right
-	bspc node -f east
+	bspc node -f east || bspc monitor -f east
 
 super + Up
-	bspc node -f north
+	bspc node -f north || bspc monitor -f north
 
 super + Down
-	bspc node -f south
+	bspc node -f south || bspc monitor -f south
 
 alt + Tab
 	bspc node -f last.local
 
 # Window Movements
 super + shift + Left
-	bspc node -n west
+	bspc node -n west || bspc node -mq west
 
 super + shift + Right
-	bspc node -n east
+	bspc node -n east || bspc node -m east
 
 super + shift + Up
-	bspc node -n north
+	bspc node -n north || bspc node -m north
 
 super + shift + Down
-	bspc node -n south
+	bspc node -n south || bspc node -m south
 
 # Window Tiling
 super + ctrl + Left

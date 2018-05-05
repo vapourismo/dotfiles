@@ -4,4 +4,5 @@ alias g=git
 
 export PATH=$PATH:$HOME/.cabal/bin
 
-source /opt/google-cloud-sdk/completion.zsh.inc
+. /opt/google-cloud-sdk/completion.zsh.inc
+. /etc/profile.d/nix.sh
