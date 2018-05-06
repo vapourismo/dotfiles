@@ -18,9 +18,34 @@ font-1 = Iosevka:size=10
 
 modules-left = memory cpu
 modules-center = date
-modules-right = volume battery
+modules-right = wifi volume battery
 
 main-foreground = #8e9ec2
+
+[module/wifi]
+type = internal/network
+interface = wlp2s0
+
+format-connected = Wireless <label-connected> <ramp-signal>
+format-connected-foreground = ${root.main-foreground}
+
+label-connected = %essid%
+label-connected-foreground = #fff
+
+format-disconnected = Wireless <label-disconnected>
+format-disconnected-foreground = ${root.main-foreground}
+
+label-disconnected = Disconnected
+label-disconnected-foreground = #666
+
+ramp-signal-0  = ▁
+ramp-signal-1  = ▂
+ramp-signal-2  = ▃
+ramp-signal-3  = ▄
+ramp-signal-4  = ▅
+ramp-signal-5  = ▆
+ramp-signal-6  = ▇
+ramp-signal-7  = █
 
 [module/volume]
 type = internal/pulseaudio
