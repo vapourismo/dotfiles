@@ -1,5 +1,7 @@
 [Unit]
 Description=Configure Xorg
+Requires=nix-environment.service
+After=nix-environment.service
 
 [Service]
 Type=oneshot
@@ -8,8 +10,9 @@ ExecStart=/usr/bin/xrdb ${HOME}/.Xresources
 ExecStart=/usr/bin/xmodmap ${HOME}/.Xmodmap
 ExecStart=/usr/bin/xset m 5
 ExecStart=/usr/bin/xset r rate 175 30
-ExecStart=/usr/bin/xinput set-int-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Tapping Enabled" 8 1
 ExecStart=/usr/bin/hsetroot -center ${HOME}/pictures/underwater.png
+ExecStart=/usr/bin/setxkbmap gb
+# ExecStart=/usr/bin/xinput set-int-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Tapping Enabled" 8 1
 
 [Install]
 WantedBy=default.target

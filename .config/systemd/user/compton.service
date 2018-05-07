@@ -1,9 +1,0 @@
-[Unit]
-Description=Compton compositor
-
-[Service]
-ExecStart=/usr/bin/compton
-Restart=always
-
-[Install]
-WantedBy=default.target

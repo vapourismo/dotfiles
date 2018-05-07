@@ -2,7 +2,7 @@
 Description=Polybar
 
 [Service]
-ExecStart=/usr/bin/polybar top
+ExecStart=/home/ole/.nix-profile/bin/polybar top
 Restart=always
 
 [Install]
