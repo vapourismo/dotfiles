@@ -50,6 +50,9 @@ super + Down
 alt + Tab
 	bspc node -f last.local
 
+super + Tab
+	bspc monitor -f last
+
 # Window Movements
 super + shift + Left
 	bspc node -n west || bspc node -mq west

@@ -9,6 +9,9 @@
 				vim
 				lua
 				sublime3
+				ghc
+				cabal-install
+				stack
 			];
 		};
 	};

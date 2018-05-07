@@ -9,7 +9,7 @@ ExecStart=/usr/bin/xrdb ${HOME}/.Xresources
 ExecStart=/usr/bin/xmodmap ${HOME}/.Xmodmap
 ExecStart=/usr/bin/xset m 5
 ExecStart=/usr/bin/xset r rate 175 30
-
+ExecStart=/usr/bin/hsetroot -solid '#000000'
 
 [Install]
 WantedBy=default.target
