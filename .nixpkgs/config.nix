@@ -8,16 +8,18 @@
 			paths = [
 				# Desktop environment
 				dmenu
-				rxvt_unicode-with-plugins
+				rxvt_unicode
+				rxvt_unicode.terminfo
 				polybar
 				bspwm
 				sxhkd
 
-				# Command-line utiliteis
+				# Command-line utilities
 				htop
 				silver-searcher
 				tmux
 				tree
+				git
 
 				# Editors
 				vim
