@@ -2,8 +2,8 @@
 	allowUnfree = true;
 
 	packageOverrides = {pkgs, ...}: {
-		all = with pkgs; buildEnv {
-			name = "all";
+		all-ole = with pkgs; buildEnv {
+			name = "all-ole";
 
 			paths = [
 				# Desktop environment
