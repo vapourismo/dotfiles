@@ -10,9 +10,18 @@
 				dmenu
 				rxvt_unicode
 				rxvt_unicode.terminfo
-				polybar
 				bspwm
 				sxhkd
+				(import ./polybar.nix)
+				vlc
+				hsetroot
+				xorg.setxkbmap
+				xorg.xmodmap
+				xorg.xrdb
+				xorg.xset
+				xorg.xinput
+				xorg.xrandr
+				xorg.xbacklight
 
 				# Command-line utilities
 				htop
@@ -20,6 +29,8 @@
 				tmux
 				tree
 				git
+				gnumake
+				cmake
 
 				# Editors
 				vim
