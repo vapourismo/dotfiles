@@ -1,9 +1,10 @@
 [Unit]
 Description=Binary Space Partitioning Window Manager
+Requires=nix-environment.service
+After=nix-environment.service
 
 [Service]
-Environment=DISPLAY=:0
-ExecStart=/usr/bin/bspwm -c ${HOME}/.config/bspwm/bspwmrc
+ExecStart=/home/ole/.nix-profile/bin/bspwm -c ${HOME}/.config/bspwm/bspwmrc
 Restart=always
 
 [Install]
