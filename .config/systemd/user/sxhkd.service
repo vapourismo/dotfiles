@@ -4,7 +4,7 @@ Requires=nix-environment.service
 After=nix-environment.service
 
 [Service]
-ExecStart=/home/ole/.nix-profile/bin/sxhkd -c ${HOME}/.config/sxhkd/sxhkdrc
+ExecStart=/usr/bin/sxhkd -c ${HOME}/.config/sxhkd/sxhkdrc
 
 [Install]
 WantedBy=default.target

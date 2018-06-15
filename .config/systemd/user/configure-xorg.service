@@ -6,13 +6,13 @@ After=nix-environment.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/home/ole/.nix-profile/bin/xrdb ${HOME}/.Xresources
-ExecStart=/home/ole/.nix-profile/bin/xmodmap ${HOME}/.Xmodmap
-ExecStart=/home/ole/.nix-profile/bin/xset m 5
-ExecStart=/home/ole/.nix-profile/bin/xset r rate 175 30
+ExecStart=/usr/bin/xrdb ${HOME}/.Xresources
+ExecStart=/usr/bin/xmodmap ${HOME}/.Xmodmap
+ExecStart=/usr/bin/xset m 5
+ExecStart=/usr/bin/xset r rate 175 30
+ExecStart=/usr/bin/setxkbmap gb
+ExecStart=/usr/bin/xinput set-int-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Tapping Enabled" 8 1
 ExecStart=/home/ole/.nix-profile/bin/hsetroot -center ${HOME}/pictures/underwater.png
-ExecStart=/home/ole/.nix-profile/bin/setxkbmap gb
-ExecStart=/home/ole/.nix-profile/bin/xinput set-int-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Tapping Enabled" 8 1
 
 [Install]
 WantedBy=default.target
