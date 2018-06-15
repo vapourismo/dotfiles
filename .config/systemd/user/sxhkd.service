@@ -1,10 +1,9 @@
 [Unit]
 Description=Simple X Hotkey Daemon
-Requires=nix-environment.service
-After=nix-environment.service
 
 [Service]
-ExecStart=/home/ole/.nix-profile/bin/sxhkd -c ${HOME}/.config/sxhkd/sxhkdrc
+ExecStart=/nix/var/nix/profiles/per-user/ole/profile/bin/sxhkd -c /nix/var/nix/profiles/per-user/ole/profile/etc/sxhkd/sxhkdrc
+Restart=always
 
 [Install]
 WantedBy=default.target
