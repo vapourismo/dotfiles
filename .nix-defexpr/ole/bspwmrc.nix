@@ -41,7 +41,7 @@ let bspc = "${bspwm}/bin/bspc";
 		(setConfig builtins.toJSON "left_padding"          leftPadding)
 		(setConfig builtins.toJSON "right_padding"         rightPadding)
 		"for m in $(${bspc} query -M); do"
-		"	bspc monitor -m $m -d ${desktopNamesStr}"
+		"	bspc monitor $m -d ${desktopNamesStr}"
 		"done"
 	];
 
@@ -55,5 +55,6 @@ in stdenv.mkDerivation {
 	installPhase = ''
 		mkdir -p $out/etc/bspwm
 		cp $bspwmrc $out/etc/bspwm/bspwmrc
+		chmod +x $out/etc/bspwm/bspwmrc
 	'';
 }
