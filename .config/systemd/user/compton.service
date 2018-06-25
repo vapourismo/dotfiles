@@ -2,7 +2,7 @@
 Description=Compton
 
 [Service]
-ExecStart=/nix/var/nix/profiles/per-user/ole/profile/bin/compton
+ExecStart=/usr/bin/compton
 Restart=always
 
 [Install]

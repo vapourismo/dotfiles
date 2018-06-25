@@ -32,7 +32,6 @@ in pkgs.buildEnv {
 		bspwmrc
 		sxhkd
 		sxhkdrc
-		compton
 
 		# Command-line utilities
 		htop
