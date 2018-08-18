@@ -1,5 +1,7 @@
 [Unit]
 Description=Binary Space Partitioning Window Manager
+Requires=xorg.socket
+After=xorg.socket
 
 [Service]
 ExecStart=/nix/var/nix/profiles/per-user/ole/profile/bin/bspwm -c /nix/var/nix/profiles/per-user/ole/profile/etc/bspwm/bspwmrc

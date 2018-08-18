@@ -34,6 +34,7 @@ in pkgs.buildEnv {
 		sxhkdrc
 
 		# Command-line utilities
+		jq
 		htop
 		silver-searcher
 		tmux

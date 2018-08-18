@@ -1,0 +1,9 @@
+[Unit]
+Description=Xorg Server
+Requires=xorg.socket
+After=xorg.socket
+
+[Service]
+Type=simple
+SuccessExitStatus=0 1
+ExecStart=/usr/bin/Xorg :0 -nolisten tcp -noreset -verbose 2 vt2

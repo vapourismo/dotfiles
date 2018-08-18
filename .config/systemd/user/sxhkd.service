@@ -1,5 +1,7 @@
 [Unit]
 Description=Simple X Hotkey Daemon
+Requires=xorg.socket
+After=xorg.socket
 
 [Service]
 ExecStart=/nix/var/nix/profiles/per-user/ole/profile/bin/sxhkd -c /nix/var/nix/profiles/per-user/ole/profile/etc/sxhkd/sxhkdrc

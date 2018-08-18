@@ -1,5 +1,7 @@
 [Unit]
 Description=Compton
+Requires=xorg.socket
+After=xorg.socket
 
 [Service]
 ExecStart=/usr/bin/compton

@@ -5,7 +5,10 @@
 }:
 
 let bspc = "${bspwm}/bin/bspc";
-	bind = key: command: {inherit key command;};
+
+	bind = key: command: {
+		inherit key command;
+	};
 
 in {
 	sxhkdrc.bindings = [
@@ -53,7 +56,10 @@ in {
 		activeBorderColor   = "#2F343F";
 		focusedBorderColor  = "#4084D6";
 		preselFeedbackColor = "#4084D6";
+        desktopNames        = ["dev" "term" "web" "misc"];
 	};
 
-	dmenuLauncher = {};
+	dmenuLauncher = {
+        font = "iosevka ss02-9";
+    };
 }
