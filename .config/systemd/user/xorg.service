@@ -2,6 +2,7 @@
 Description=Xorg Server
 Requires=xorg.socket
 After=xorg.socket
+Before=xorg.target
 
 [Service]
 Type=simple

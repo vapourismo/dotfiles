@@ -1,7 +1,7 @@
 [Unit]
 Description=Configure Xorg
-Requires=xorg.socket
-After=xorg.socket
+Requires=xorg.target
+After=xorg.target
 
 [Service]
 Type=oneshot
@@ -11,7 +11,7 @@ ExecStart=/usr/bin/xrandr --output DP-1 --mode 2560x1440 --rate 144 --pos 0x450
 ExecStart=/usr/bin/xrandr --output DP-3 --rotate right --pos 2560x0
 ExecStart=/usr/bin/xrdb ${HOME}/.Xresources
 ExecStart=/usr/bin/xmodmap ${HOME}/.Xmodmap
-ExecStart=/usr/bin/xset m 5
+ExecStart=/usr/bin/xset m 6
 ExecStart=/usr/bin/xset r rate 175 30
 ExecStart=/usr/bin/hsetroot -solid '#000000'
 

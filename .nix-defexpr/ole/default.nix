@@ -43,7 +43,6 @@ in pkgs.buildEnv {
 
 		# Editors
 		vim
-		sublime3
 
 		# Haskell
 		ghc
