@@ -48,8 +48,13 @@ in pkgs.buildEnv {
 		ghc
 		cabal-install
 		stack
+		haskellPackages.ghcid
 		haskellPackages.hlint
 		haskellPackages.hoogle
 		haskellPackages.stylish-haskell
+
+		# Kubernetes
+		helm
+		kubectl
 	];
 }
