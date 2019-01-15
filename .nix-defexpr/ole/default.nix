@@ -25,6 +25,7 @@ in pkgs.buildEnv {
 		rxvt_unicode
 		rxvt_unicode.terminfo
 		vlc
+                chromium
 		hsetroot
 		dmenuLauncher
 		dmenu
@@ -32,6 +33,10 @@ in pkgs.buildEnv {
 		bspwmrc
 		sxhkd
 		sxhkdrc
+                
+                # Themes
+                arc-theme
+                arc-icon-theme
 
 		# Command-line utilities
 		jq
