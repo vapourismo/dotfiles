@@ -29,9 +29,7 @@ in pkgs.buildEnv {
 		hsetroot
 		dmenuLauncher
 		dmenu
-		bspwm
 		bspwmrc
-		sxhkd
 		sxhkdrc
                 
                 # Themes
@@ -48,6 +46,7 @@ in pkgs.buildEnv {
 
 		# Editors
 		vim
+                sublime3-dev
 
 		# Haskell
 		ghc
@@ -59,7 +58,6 @@ in pkgs.buildEnv {
 		haskellPackages.stylish-haskell
 
 		# Kubernetes
-		helm
 		kubectl
 	];
 }
