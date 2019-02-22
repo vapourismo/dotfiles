@@ -60,6 +60,6 @@ in {
 	};
 
 	dmenuLauncher = {
-        font = "iosevka ss02-9";
+        font = "iosevka termp ss02-9";
     };
 }

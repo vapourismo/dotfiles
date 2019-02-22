@@ -25,16 +25,16 @@ in pkgs.buildEnv {
 		rxvt_unicode
 		rxvt_unicode.terminfo
 		vlc
-                chromium
+		chromium
 		hsetroot
 		dmenuLauncher
 		dmenu
 		bspwmrc
 		sxhkdrc
-                
-                # Themes
-                arc-theme
-                arc-icon-theme
+
+		# Themes
+		arc-theme
+		arc-icon-theme
 
 		# Command-line utilities
 		jq
@@ -43,10 +43,12 @@ in pkgs.buildEnv {
 		tmux
 		tree
 		git
+		binutils
+		taskell
 
 		# Editors
 		vim
-                sublime3-dev
+		sublime3-dev
 
 		# Haskell
 		ghc
