@@ -19,7 +19,7 @@ URxvt.color13: #AD7FA8
 URxvt.color14: #34E2E2
 URxvt.color15: #EEEEEC
 URxvt.scrollBar: false
-URxvt.font: xft:Iosevka:size=11
+URxvt.font: xft:Iosevka Term SS02:size=11
 URxvt.perl-ext-common: default,matcher
 URxvt.matcher.button: 1
 URxvt.internalBorder: 6

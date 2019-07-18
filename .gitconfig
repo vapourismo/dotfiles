@@ -9,6 +9,7 @@
 	a = add -v
 	co = checkout
 	ml = log --oneline --author=ole@vprsm.de --no-merges
+	l = log --oneline
 [core]
 	editor = subl -w
 [diff]
