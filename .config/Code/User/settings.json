@@ -1,0 +1,19 @@
+{
+    "editor.fontFamily": "'Iosevka Term SS02'",
+    "files.autoSave": "onFocusChange",
+    "editor.wordWrapColumn": 100,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.activityBar.visible": false,
+    "editor.minimap.enabled": false,
+    "search.showLineNumbers": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Ole's Theme",
+    "explorer.confirmDelete": false,
+    "files.trimTrailingWhitespace": true,
+    "search.searchOnType": false,
+    "breadcrumbs.enabled": true,
+    "breadcrumbs.filePath": "off",
+    "editor.tabSize": 2
+}
