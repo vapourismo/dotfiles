@@ -31,7 +31,7 @@ alias grep='grep --color=auto'
 alias g=git
 
 # Environment variables
-export PATH=$PATH:$HOME/.cabal/bin
+export PATH=$PATH:$HOME/.cabal/bin:$HOME/.local/bin
 
 # History
 export HISTFILE=$HOME/.zhistory

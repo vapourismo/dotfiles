@@ -1,65 +1,70 @@
 let pkgs = import <nixpkgs> {};
 
-	config = import ./config.nix {
-		inherit (pkgs) bspwm rxvt_unicode;
-		inherit dmenuLauncher;
-	};
+    config = import ./config.nix {
+      inherit (pkgs) bspwm rxvt_unicode firefox;
+      inherit dmenuLauncher;
+    };
 
-	bspwmrc = import ./bspwmrc.nix (
-		{ inherit (pkgs) stdenv writeText bspwm; } // config.bspwmrc
-	);
+    bspwmrc = import ./bspwmrc.nix (
+      { inherit (pkgs) stdenv writeText bspwm; } // config.bspwmrc
+    );
 
-	sxhkdrc = import ./sxhkdrc.nix (
-		{ inherit (pkgs) stdenv writeText; } // config.sxhkdrc
-	);
+    sxhkdrc = import ./sxhkdrc.nix (
+      { inherit (pkgs) stdenv writeText; } // config.sxhkdrc
+    );
 
-	dmenuLauncher = import ./dmenu-launcher.nix (
-		{ inherit (pkgs) stdenv writeText dmenu bspwm; } // config.dmenuLauncher
-	);
+    dmenuLauncher = import ./dmenu-launcher.nix (
+      { inherit (pkgs) stdenv writeText dmenu bspwm; } // config.dmenuLauncher
+    );
 
 in pkgs.buildEnv {
-	name = "ole";
+  name = "ole";
 
-	paths = with pkgs; [
-		# Desktop environment
-		rxvt_unicode
-		rxvt_unicode.terminfo
-		vlc
-		chromium
-		hsetroot
-		dmenuLauncher
-		dmenu
-		bspwmrc
-		sxhkdrc
+  paths = with pkgs; [
+    # Desktop environment
+    rxvt_unicode
+    rxvt_unicode.terminfo
+    vlc
+    firefox
+    hsetroot
+    dmenuLauncher
+    dmenu
+    bspwmrc
+    sxhkdrc
 
-		# Themes
-		arc-theme
-		arc-icon-theme
+    # Other
+    steam-run-native
+    steam
 
-		# Command-line utilities
-		jq
-		htop
-		silver-searcher
-		tmux
-		tree
-		git
-		binutils
-		taskell
+    # Themes
+    arc-theme
+    arc-icon-theme
 
-		# Editors
-		vim
-		sublime3-dev
+    # Command-line utilities
+    jq
+    htop
+    silver-searcher
+    tmux
+    tree
+    git
+    binutils
+    taskell
+    calc
 
-		# Haskell
-		ghc
-		cabal-install
-		stack
-		haskellPackages.ghcid
-		haskellPackages.hlint
-		haskellPackages.hoogle
-		haskellPackages.stylish-haskell
+    # Editors
+    vim
+    sublime3
 
-		# Kubernetes
-		kubectl
-	];
+    # Haskell
+    ghc
+    cabal-install
+    # stack
+    haskellPackages.ghcid
+    haskellPackages.hlint
+    haskellPackages.hoogle
+    haskellPackages.stylish-haskell
+
+    # Kubernetes
+    kubectl
+  ];
 }
