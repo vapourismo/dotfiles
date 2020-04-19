@@ -13,7 +13,7 @@
     "explorer.confirmDelete": false,
     "files.trimTrailingWhitespace": true,
     "search.searchOnType": false,
-    "breadcrumbs.enabled": true,
+    "breadcrumbs.enabled": false,
     "breadcrumbs.filePath": "off",
     "editor.tabSize": 2
 }

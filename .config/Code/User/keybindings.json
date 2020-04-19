@@ -241,7 +241,7 @@
 
     // Interactions
     {
-        "key": "b i",
+        "key": "g i",
         "command": "editor.action.showHover",
         "when": "editorTextFocus && modal.inNormalMode"
     },
