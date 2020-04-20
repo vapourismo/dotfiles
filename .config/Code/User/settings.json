@@ -21,5 +21,7 @@
         120
     ],
     "editor.fontSize": 13,
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "hic.executablePath": "/home/ole/.local/bin/ghcide",
+    "editor.renderLineHighlight": "all"
 }

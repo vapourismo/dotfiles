@@ -1,13 +1,18 @@
 [user]
 	email = ole@vprsm.de
-	name = Ole
+	name = Ole Krüger
 [alias]
 	s = status -s
 	c = commit -v
 	ca = commit -av
 	d = diff
 	a = add -v
+	avu = add -vu
 	co = checkout
 	ml = log --oneline --author=ole@vprsm.de --no-merges
+	pfwl = push --force-with-lease
+	g = grep -n
+	rbi = rebase -i
+	prb = pull --rebase
 [diff]
 	algorithm = patience

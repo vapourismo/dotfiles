@@ -231,6 +231,11 @@
         "key": "ctrl+p",
         "command": "workbench.action.showCommands"
     },
+    {
+        "key": "shift+;",
+        "command": "workbench.action.showCommands",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
 
     // Duplication
     {
@@ -338,5 +343,17 @@
         "key": "b l",
         "command": "workbench.action.nextEditorInGroup",
         "when": "editorFocus && modal.inNormalMode"
+    },
+
+    // Find
+    {
+        "key": "f k",
+        "command": "editor.action.previousSelectionMatchFindAction",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "f j",
+        "command": "editor.action.nextSelectionMatchFindAction",
+        "when": "editorTextFocus && modal.inNormalMode"
     }
 ]
