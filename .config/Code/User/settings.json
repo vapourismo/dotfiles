@@ -15,5 +15,11 @@
     "search.searchOnType": false,
     "breadcrumbs.enabled": false,
     "breadcrumbs.filePath": "off",
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.rulers": [
+        100,
+        120
+    ],
+    "editor.fontSize": 13,
+    "vsicons.dontShowNewVersionMessage": true
 }

@@ -9,29 +9,29 @@
     {
         "key": "i",
         "command": "modal.enterInsertMode",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
 
     // Movement
     {
         "key": "h",
         "command": "cursorLeft",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
     {
         "key": "l",
         "command": "cursorRight",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
     {
         "key": "k",
         "command": "cursorUp",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
     {
         "key": "j",
         "command": "cursorDown",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
 
     {
@@ -104,22 +104,22 @@
     {
         "key": "shift+h",
         "command": "cursorLeftSelect",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
     {
         "key": "shift+l",
         "command": "cursorRightSelect",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
     {
         "key": "shift+k",
         "command": "cursorUpSelect",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
     {
         "key": "shift+j",
         "command": "cursorDownSelect",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
 
     {
@@ -185,41 +185,41 @@
         "key": "shift+alt+j",
         "command": "editor.action.insertCursorBelow",
         "when": "editorTextFocus"
-    }
+    },
 
     // Deletion
     {
         "key": "x",
         "command": "deleteRight",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
 
     {
         "key": "d l",
         "command": "deleteWordRight",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
     {
         "key": "d h",
         "command": "deleteWordLeft",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
 
     {
         "key": "d a",
         "command": "deleteAllLeft",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
     {
         "key": "d e",
         "command": "deleteAllRight",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
 
     {
         "key": "d d",
         "command": "editor.action.deleteLines",
-        "when": "textInputFocus && !editorReadonly && modal.inNormalMode"
+        "when": "editorTextFocus && !editorReadonly && modal.inNormalMode"
     },
 
     // Open file
@@ -236,7 +236,7 @@
     {
         "key": "shift+d",
         "command": "editor.action.duplicateSelection",
-        "when": "textInputFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
 
     // Interactions
