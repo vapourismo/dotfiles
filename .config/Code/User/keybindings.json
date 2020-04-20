@@ -91,13 +91,21 @@
     // Scrolling
     {
         "key": "alt+k",
-        "command": "scrollPageUp",
-        "when": "textInputFocus"
+        "command": "editorScroll",
+        "when": "editorFocus",
+        "args": {
+            "to": "up",
+            "value": 15
+        }
     },
     {
         "key": "alt+j",
-        "command": "scrollPageDown",
-        "when": "textInputFocus"
+        "command": "editorScroll",
+        "when": "editorFocus",
+        "args": {
+            "to": "down",
+            "value": 15
+        }
     },
 
     // Selection
@@ -355,5 +363,39 @@
         "key": "f j",
         "command": "editor.action.nextSelectionMatchFindAction",
         "when": "editorTextFocus && modal.inNormalMode"
+    },
+
+    // Normal mode typing
+    {
+        "key": "enter",
+        "command": "default:type",
+        "when": "editorTextFocus && modal.inNormalMode",
+        "args": {
+            "text": "\n"
+        }
+    },
+    {
+        "key": "shift+9",
+        "command": "default:type",
+        "when": "editorTextFocus && modal.inNormalMode",
+        "args": {
+            "text": "("
+        }
+    },
+    {
+        "key": "shift+[",
+        "command": "default:type",
+        "when": "editorTextFocus && modal.inNormalMode",
+        "args": {
+            "text": "{"
+        }
+    },
+    {
+        "key": "[",
+        "command": "default:type",
+        "when": "editorTextFocus && modal.inNormalMode",
+        "args": {
+            "text": "["
+        }
     }
 ]
