@@ -1,23 +1,24 @@
 {
-	stdenv,
-	writeText,
+  stdenv,
+  writeText,
 
-	bindings ? []
+  bindings ? []
 }:
 
-let mkBinding = {key, command}: key + "\n\t" + command;
+let
+  mkBinding = {key, command}: key + "\n\t" + command;
 
-	contents = builtins.concatStringsSep "\n\n" (map mkBinding bindings);
+  contents = builtins.concatStringsSep "\n\n" (map mkBinding bindings);
 
 in stdenv.mkDerivation {
-	name = "sxhkdrc";
+  name = "sxhkdrc";
 
-	sxhkdrc = writeText "sxhkdrc" contents;
+  sxhkdrc = writeText "sxhkdrc" contents;
 
-	phases = ["installPhase"];
+  phases = ["installPhase"];
 
-	installPhase = ''
-		mkdir -p $out/etc/sxhkd
-		cp $sxhkdrc $out/etc/sxhkd/sxhkdrc
-	'';
+  installPhase = ''
+    mkdir -p $out/etc/sxhkd
+    cp $sxhkdrc $out/etc/sxhkd/sxhkdrc
+  '';
 }

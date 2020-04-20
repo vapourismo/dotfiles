@@ -92,7 +92,7 @@
     {
         "key": "alt+k",
         "command": "editorScroll",
-        "when": "editorFocus",
+        "when": "editorTextFocus",
         "args": {
             "to": "up",
             "value": 15
@@ -101,7 +101,7 @@
     {
         "key": "alt+j",
         "command": "editorScroll",
-        "when": "editorFocus",
+        "when": "editorTextFocus",
         "args": {
             "to": "down",
             "value": 15
@@ -277,37 +277,73 @@
     {
         "key": "g k",
         "command": "editor.action.marker.prev",
-        "when": "editorFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
     {
         "key": "g j",
         "command": "editor.action.marker.next",
-        "when": "editorFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
 
     // Window Movement
     {
         "key": "w l",
         "command": "workbench.action.focusRightGroup",
-        "when": "editorFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
     {
         "key": "w h",
         "command": "workbench.action.focusLeftGroup",
-        "when": "editorFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
 
     {
         "key": "w shift+l",
         "command": "workbench.action.moveEditorToRightGroup",
-        "when": "editorFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
     {
         "key": "w shift+h",
         "command": "workbench.action.moveEditorToLeftGroup",
-        "when": "editorFocus && modal.inNormalMode"
+        "when": "editorTextFocus && modal.inNormalMode"
     },
 
+    {
+        "key": "w c",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+
+    {
+        "key": "w 0",
+        "command": "workbench.action.focusSideBar",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "w 1",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "w 2",
+        "command": "workbench.action.focusSecondEditorGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "w 3",
+        "command": "workbench.action.focusThirdEditorGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "w p",
+        "command": "workbench.actions.view.problems",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+
+    {
+        "key": "alt+0",
+        "command": "workbench.action.focusSideBar"
+    },
     {
         "key": "alt+1",
         "command": "workbench.action.focusFirstEditorGroup"
@@ -319,6 +355,47 @@
     {
         "key": "alt+3",
         "command": "workbench.action.focusThirdEditorGroup"
+    },
+    {
+        "key": "alt+p",
+        "command": "workbench.actions.view.problems"
+    },
+
+    {
+        "key": "b h",
+        "command": "workbench.action.previousEditorInGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "b l",
+        "command": "workbench.action.nextEditorInGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+
+    {
+        "key": "b 1",
+        "command": "workbench.action.openEditorAtIndex1",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "b 2",
+        "command": "workbench.action.openEditorAtIndex2",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "b 3",
+        "command": "workbench.action.openEditorAtIndex3",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "b 4",
+        "command": "workbench.action.openEditorAtIndex4",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "b 5",
+        "command": "workbench.action.openEditorAtIndex5",
+        "when": "editorTextFocus && modal.inNormalMode"
     },
 
     {
@@ -340,17 +417,6 @@
     {
         "key": "ctrl+5",
         "command": "workbench.action.openEditorAtIndex5"
-    },
-
-    {
-        "key": "b h",
-        "command": "workbench.action.previousEditorInGroup",
-        "when": "editorFocus && modal.inNormalMode"
-    },
-    {
-        "key": "b l",
-        "command": "workbench.action.nextEditorInGroup",
-        "when": "editorFocus && modal.inNormalMode"
     },
 
     // Find
@@ -396,6 +462,22 @@
         "when": "editorTextFocus && modal.inNormalMode",
         "args": {
             "text": "["
+        }
+    },
+    {
+        "key": "'",
+        "command": "default:type",
+        "when": "editorTextFocus && modal.inNormalMode",
+        "args": {
+            "text": "'"
+        }
+    },
+    {
+        "key": "shift+'",
+        "command": "default:type",
+        "when": "editorTextFocus && modal.inNormalMode",
+        "args": {
+            "text": "\""
         }
     }
 ]

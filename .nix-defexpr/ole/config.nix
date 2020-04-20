@@ -5,7 +5,7 @@
   firefox
 }:
 
-let 
+let
   bspc = "${bspwm}/bin/bspc";
 
   bind = key: command: {
@@ -69,5 +69,6 @@ in {
 
   dmenuLauncher = {
     font = "iosevka term ss02-9";
+    bottomPadding = 110;
   };
 }
