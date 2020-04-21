@@ -16,3 +16,5 @@
 	prb = pull --rebase
 [diff]
 	algorithm = patience
+[core]
+	editor = code -w

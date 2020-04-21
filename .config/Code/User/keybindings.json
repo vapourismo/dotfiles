@@ -4,7 +4,7 @@
     {
         "key": "escape",
         "command": "modal.enterNormalMode",
-        "when": "textInputFocus && modal.inInsertMode"
+        "when": "editorTextFocus && modal.inInsertMode"
     },
     {
         "key": "i",
@@ -344,6 +344,7 @@
         "key": "alt+0",
         "command": "workbench.action.focusSideBar"
     },
+
     {
         "key": "alt+1",
         "command": "workbench.action.focusFirstEditorGroup"
@@ -356,6 +357,12 @@
         "key": "alt+3",
         "command": "workbench.action.focusThirdEditorGroup"
     },
+
+    {
+        "key": "shift+alt+1",
+        "command": "workbench.action.moveEditorToFirstGroup"
+    },
+
     {
         "key": "alt+p",
         "command": "workbench.actions.view.problems"

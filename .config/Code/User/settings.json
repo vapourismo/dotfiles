@@ -9,7 +9,7 @@
     "editor.minimap.enabled": false,
     "search.showLineNumbers": true,
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Ole's Theme",
+    "workbench.colorTheme": "Vapou's Theme",
     "explorer.confirmDelete": false,
     "files.trimTrailingWhitespace": true,
     "search.searchOnType": false,
