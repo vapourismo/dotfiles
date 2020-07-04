@@ -2,6 +2,12 @@ let pkgs = import <nixpkgs> {};
 
 	bspwmrc = import ./bspwmrc.nix {
 		inherit (pkgs) stdenv writeText bspwm;
+
+		windowGap     = -1;
+		topPadding    = 1;
+		bottomPadding = 1;
+		leftPadding   = 1;
+		rightPadding  = 1;
 	};
 
 	sxhkdrc = import ./sxhkdrc.nix {
@@ -37,36 +43,36 @@ let pkgs = import <nixpkgs> {};
 			{key = "super + alt + Up";      command = "bspc node @north -r -20";}
 			{key = "super + alt + Down";    command = "bspc node @south -r +20";}
 
-			{key = "super + h";          command = "bspc node -f west";}
+			{key = "super + h";         command = "bspc node -f west";}
 			{key = "super + l";         command = "bspc node -f east";}
-			{key = "super + k";            command = "bspc node -f north";}
-			{key = "super + j";          command = "bspc node -f south";}
-			{key = "super + shift + h";  command = "bspc node -n west";}
+			{key = "super + k";         command = "bspc node -f north";}
+			{key = "super + j";         command = "bspc node -f south";}
+			{key = "super + shift + h"; command = "bspc node -n west";}
 			{key = "super + shift + l"; command = "bspc node -n east";}
-			{key = "super + shift + k";    command = "bspc node -n north";}
-			{key = "super + shift + j";  command = "bspc node -n south";}
-			{key = "super + ctrl + h";   command = "bspc node -p west";}
+			{key = "super + shift + k"; command = "bspc node -n north";}
+			{key = "super + shift + j"; command = "bspc node -n south";}
+			{key = "super + ctrl + h";  command = "bspc node -p west";}
 			{key = "super + ctrl + l";  command = "bspc node -p east";}
-			{key = "super + ctrl + k";     command = "bspc node -p north";}
-			{key = "super + ctrl + j";   command = "bspc node -p south";}
-			{key = "super + alt + h";    command = "bspc node @west -r -20";}
+			{key = "super + ctrl + k";  command = "bspc node -p north";}
+			{key = "super + ctrl + j";  command = "bspc node -p south";}
+			{key = "super + alt + h";   command = "bspc node @west -r -20";}
 			{key = "super + alt + l";   command = "bspc node @east -r +20";}
-			{key = "super + alt + k";      command = "bspc node @north -r -20";}
-			{key = "super + alt + j";    command = "bspc node @south -r +20";}
+			{key = "super + alt + k";   command = "bspc node @north -r -20";}
+			{key = "super + alt + j";   command = "bspc node @south -r +20";}
 
 			{key = "super + BackSpace";     command = "bspc node -p cancel";}
 			{key = "super + w";             command = "bspc node -c";}
 			{key = "super + f";             command = "bspc node -t '~floating'";}
 			{key = "super + shift + f";     command = "bspc node -t '~fullscreen'";}
-			{key = "super + Return";        command = "urxvt";}
-			{key = "super + i";             command = "chromium";}
+			{key = "super + Return";        command = "${pkgs.termite}/bin/termite";}
+			{key = "super + i";             command = "${pkgs.chromium}/bin/chromium";}
 			{key = "super + r";             command = "/home/ole/.local/bin/dmenu";}
 			{key = "super + l";             command = "/usr/bin/i3lock-ole";}
 			{key = "XF86MonBrightnessUp";   command = "xbacklight -inc 5";}
 			{key = "XF86MonBrightnessDown"; command = "xbacklight -dec 5";}
-			{key = "XF86AudioLowerVolume";  command = "pactl set-sink-volume @DEFAULT_SINK@ '-5%'";}
-			{key = "XF86AudioRaiseVolume";  command = "pactl set-sink-volume @DEFAULT_SINK@ '+5%'";}
-			{key = "XF86AudioMute";         command = "pactl set-sink-mute @DEFAULT_SINK@ toggle";}
+			{key = "XF86AudioLowerVolume";  command = "amixer set Master 5%-";}
+			{key = "XF86AudioRaiseVolume";  command = "amixer set Master 5%+";}
+			{key = "XF86AudioMute";         command = "amixer set Master toggle";}
 			{key = "super + Escape";        command = "pkill -USR1 -x sxhkd";}
 		];
 	};
@@ -76,15 +82,23 @@ in pkgs.buildEnv {
 
 	paths = with pkgs; [
 		# Desktop environment
-		rxvt_unicode
-		rxvt_unicode.terminfo
+		termite
+		termite.terminfo
 		vlc
 		hsetroot
-
 		bspwm
 		bspwmrc
 		sxhkd
 		sxhkdrc
+        discord
+
+        # Theme
+        arc-theme
+        arc-icon-theme
+
+		# Internet
+		chromium
+        firefox
 
 		# Command-line utilities
 		htop
@@ -92,19 +106,37 @@ in pkgs.buildEnv {
 		tmux
 		tree
 		git
-		zsh
+    	zsh
+        wget 
+        curl
+        binutils
+        unzip
+        feh
+        taskell
+        killall
+        calc
+        bind
+        whois
+        openssh
 
 		# Editors
 		vim
 		sublime3
+        vscode
+
+        # Containers
+        docker
+        kubectl
+        helm
 
 		# Haskell
 		ghc
 		cabal-install
 		stack
-		haskellPackages.brittany
-		haskellPackages.hlint
+        haskellPackages.hlint
+        haskellPackages.ghcid
+		haskellPackages.ghcide
 		haskellPackages.hoogle
-		haskellPackages.stylish-haskell
+        haskellPackages.stylish-haskell
 	];
 }

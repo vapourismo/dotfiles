@@ -45,7 +45,6 @@ alias grep='grep --color=auto'
 alias g=git
 
 # Nix
-. /etc/profile.d/nix.sh
+. /nix/var/nix/profiles/per-user/ole/profile/etc/profile.d/nix.sh
 
-# Plugins
-. $HOME/.zplugins/zsh-nix-shell/nix-shell.plugin.zsh
+export TERMINFO=$HOME/.nix-profile/share/terminfo

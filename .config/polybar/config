@@ -51,7 +51,7 @@ ramp-signal-6  = ▇
 ramp-signal-7  = █
 
 [module/volume]
-type = internal/pulseaudio
+type = internal/alsa 
 
 format-volume = Volume <label-volume> <ramp-volume>
 format-volume-foreground = ${root.main-foreground}

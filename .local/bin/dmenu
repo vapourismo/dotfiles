@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. /etc/profile.d/nix.sh
+. /home/ole/.nix-profile/etc/profile.d/nix.sh
 
 paths="$(echo $PATH | sed 's/:/\n/g')"
 
