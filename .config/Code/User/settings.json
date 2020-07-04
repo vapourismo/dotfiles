@@ -22,6 +22,13 @@
     ],
     "editor.fontSize": 13,
     "vsicons.dontShowNewVersionMessage": true,
-    "hic.executablePath": "/home/ole/.local/bin/ghcide",
-    "editor.renderLineHighlight": "all"
+    "hic.executablePath": "/home/ole/.nix-profile/bin/ghcide",
+    "editor.renderLineHighlight": "all",
+    "haskell.hlint.run": "onType",
+    "editor.formatOnSave": true,
+    "stylishHaskell.showConsoleOnError": false,
+    "files.insertFinalNewline": true,
+    "window.zoomLevel": 0,
+    "editor.suggest.showWords": true,
+    "editor.wordBasedSuggestions": true
 }

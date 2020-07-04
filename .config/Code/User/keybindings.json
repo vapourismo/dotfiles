@@ -11,7 +11,6 @@
         "command": "modal.enterInsertMode",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     // Movement
     {
         "key": "h",
@@ -33,7 +32,6 @@
         "command": "cursorDown",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     {
         "key": "ctrl+h",
         "command": "cursorWordStartLeft",
@@ -54,7 +52,6 @@
         "command": "spaceBlockJumper.moveDown",
         "when": "textInputFocus"
     },
-
     {
         "key": "alt+h",
         "command": "cursorWordPartStartLeft",
@@ -65,7 +62,6 @@
         "command": "cursorWordPartRight",
         "when": "textInputFocus"
     },
-
     {
         "key": "ctrl+e",
         "command": "cursorEnd",
@@ -76,7 +72,6 @@
         "command": "cursorHome",
         "when": "textInputFocus"
     },
-
     {
         "key": "alt+e",
         "command": "cursorEnd",
@@ -87,7 +82,11 @@
         "command": "cursorHome",
         "when": "textInputFocus"
     },
-
+    {
+        "key": "ctrl+m",
+        "command": "editor.action.jumpToBracket",
+        "when": "editorTextFocus"
+    },
     // Scrolling
     {
         "key": "alt+k",
@@ -107,7 +106,6 @@
             "value": 15
         }
     },
-
     // Selection
     {
         "key": "shift+h",
@@ -129,7 +127,6 @@
         "command": "cursorDownSelect",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     {
         "key": "shift+ctrl+h",
         "command": "cursorWordStartLeftSelect",
@@ -150,7 +147,6 @@
         "command": "spaceBlockJumper.selectDown",
         "when": "textInputFocus"
     },
-
     {
         "key": "shift+alt+h",
         "command": "cursorWordPartStartLeftSelect",
@@ -161,7 +157,6 @@
         "command": "cursorWordPartRightSelect",
         "when": "textInputFocus"
     },
-
     {
         "key": "shift+ctrl+e",
         "command": "cursorEndSelect",
@@ -172,7 +167,6 @@
         "command": "cursorHomeSelect",
         "when": "textInputFocus"
     },
-
     {
         "key": "shift+alt+e",
         "command": "cursorEndSelect",
@@ -183,7 +177,6 @@
         "command": "cursorHomeSelect",
         "when": "textInputFocus"
     },
-
     {
         "key": "shift+alt+k",
         "command": "editor.action.insertCursorAbove",
@@ -194,14 +187,12 @@
         "command": "editor.action.insertCursorBelow",
         "when": "editorTextFocus"
     },
-
     // Deletion
     {
         "key": "x",
         "command": "deleteRight",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     {
         "key": "d l",
         "command": "deleteWordRight",
@@ -212,7 +203,6 @@
         "command": "deleteWordLeft",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     {
         "key": "d a",
         "command": "deleteAllLeft",
@@ -223,13 +213,11 @@
         "command": "deleteAllRight",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     {
-        "key": "d d",
+        "key": "shift+d",
         "command": "editor.action.deleteLines",
         "when": "editorTextFocus && !editorReadonly && modal.inNormalMode"
     },
-
     // Open file
     {
         "key": "ctrl+o",
@@ -244,14 +232,6 @@
         "command": "workbench.action.showCommands",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
-    // Duplication
-    {
-        "key": "shift+d",
-        "command": "editor.action.duplicateSelection",
-        "when": "editorTextFocus && modal.inNormalMode"
-    },
-
     // Interactions
     {
         "key": "g i",
@@ -268,7 +248,6 @@
         "command": "editor.action.quickFix",
         "when": "editorHasCodeActionsProvider && editorTextFocus && modal.inNormalMode"
     },
-
     {
         "key": "g d",
         "command": "editor.action.revealDefinition",
@@ -284,7 +263,6 @@
         "command": "editor.action.marker.next",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     // Window Movement
     {
         "key": "w l",
@@ -296,7 +274,6 @@
         "command": "workbench.action.focusLeftGroup",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     {
         "key": "w shift+l",
         "command": "workbench.action.moveEditorToRightGroup",
@@ -307,13 +284,11 @@
         "command": "workbench.action.moveEditorToLeftGroup",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     {
         "key": "w c",
         "command": "workbench.action.closeActiveEditor",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     {
         "key": "w 0",
         "command": "workbench.action.focusSideBar",
@@ -339,12 +314,10 @@
         "command": "workbench.actions.view.problems",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     {
         "key": "alt+0",
         "command": "workbench.action.focusSideBar"
     },
-
     {
         "key": "alt+1",
         "command": "workbench.action.focusFirstEditorGroup"
@@ -357,17 +330,14 @@
         "key": "alt+3",
         "command": "workbench.action.focusThirdEditorGroup"
     },
-
     {
         "key": "shift+alt+1",
         "command": "workbench.action.moveEditorToFirstGroup"
     },
-
     {
         "key": "alt+p",
         "command": "workbench.actions.view.problems"
     },
-
     {
         "key": "b h",
         "command": "workbench.action.previousEditorInGroup",
@@ -378,7 +348,6 @@
         "command": "workbench.action.nextEditorInGroup",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     {
         "key": "b 1",
         "command": "workbench.action.openEditorAtIndex1",
@@ -404,7 +373,6 @@
         "command": "workbench.action.openEditorAtIndex5",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     {
         "key": "ctrl+1",
         "command": "workbench.action.openEditorAtIndex1"
@@ -425,7 +393,6 @@
         "key": "ctrl+5",
         "command": "workbench.action.openEditorAtIndex5"
     },
-
     // Find
     {
         "key": "f k",
@@ -437,7 +404,6 @@
         "command": "editor.action.nextSelectionMatchFindAction",
         "when": "editorTextFocus && modal.inNormalMode"
     },
-
     // Normal mode typing
     {
         "key": "enter",

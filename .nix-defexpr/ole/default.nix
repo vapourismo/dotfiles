@@ -31,8 +31,13 @@ in pkgs.buildEnv {
     dmenu
     bspwmrc
     sxhkdrc
+    discord
+    gcolor2
+    gimp
+    pavucontrol
+    scrot
 
-    # Other
+    # Steam
     steam-run-native
     steam
 
@@ -50,21 +55,31 @@ in pkgs.buildEnv {
     binutils
     taskell
     calc
+    whois
+    bind
+    unzip
+    feh
+    wget
+    curl
+    killall
+
+    # Containers
+    docker
+    kubectl
+    helm
 
     # Editors
     vim
     sublime3
+    vscode
 
     # Haskell
     ghc
     cabal-install
-    # stack
     haskellPackages.ghcid
+    haskellPackages.ghcide
     haskellPackages.hlint
     haskellPackages.hoogle
     haskellPackages.stylish-haskell
-
-    # Kubernetes
-    kubectl
   ];
 }
