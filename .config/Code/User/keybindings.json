@@ -1,0 +1,456 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    // Mode switching
+    {
+        "key": "escape",
+        "command": "modal.enterNormalMode",
+        "when": "editorTextFocus && modal.inInsertMode"
+    },
+    {
+        "key": "i",
+        "command": "modal.enterInsertMode",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    // Movement
+    {
+        "key": "h",
+        "command": "cursorLeft",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "l",
+        "command": "cursorRight",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "k",
+        "command": "cursorUp",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "j",
+        "command": "cursorDown",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "cursorWordStartLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "cursorWordEndRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "spaceBlockJumper.moveUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "spaceBlockJumper.moveDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+h",
+        "command": "cursorWordPartStartLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+l",
+        "command": "cursorWordPartRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "cursorHome",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+e",
+        "command": "cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+a",
+        "command": "cursorHome",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "editor.action.jumpToBracket",
+        "when": "editorTextFocus"
+    },
+    // Scrolling
+    {
+        "key": "alt+k",
+        "command": "editorScroll",
+        "when": "editorTextFocus",
+        "args": {
+            "to": "up",
+            "value": 15
+        }
+    },
+    {
+        "key": "alt+j",
+        "command": "editorScroll",
+        "when": "editorTextFocus",
+        "args": {
+            "to": "down",
+            "value": 15
+        }
+    },
+    // Selection
+    {
+        "key": "shift+h",
+        "command": "cursorLeftSelect",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "shift+l",
+        "command": "cursorRightSelect",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "shift+k",
+        "command": "cursorUpSelect",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "shift+j",
+        "command": "cursorDownSelect",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "shift+ctrl+h",
+        "command": "cursorWordStartLeftSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+ctrl+l",
+        "command": "cursorWordEndRightSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+ctrl+k",
+        "command": "spaceBlockJumper.selectUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+ctrl+j",
+        "command": "spaceBlockJumper.selectDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+alt+h",
+        "command": "cursorWordPartStartLeftSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+alt+l",
+        "command": "cursorWordPartRightSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+ctrl+e",
+        "command": "cursorEndSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+ctrl+a",
+        "command": "cursorHomeSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+alt+e",
+        "command": "cursorEndSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+alt+a",
+        "command": "cursorHomeSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+alt+k",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+j",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    // Deletion
+    {
+        "key": "x",
+        "command": "deleteRight",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "d l",
+        "command": "deleteWordRight",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "d h",
+        "command": "deleteWordLeft",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "d a",
+        "command": "deleteAllLeft",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "d e",
+        "command": "deleteAllRight",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "shift+d",
+        "command": "editor.action.deleteLines",
+        "when": "editorTextFocus && !editorReadonly && modal.inNormalMode"
+    },
+    // Open file
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "shift+;",
+        "command": "workbench.action.showCommands",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    // Interactions
+    {
+        "key": "g i",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "g p",
+        "command": "editor.action.peekDefinition",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "g f",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "g k",
+        "command": "editor.action.marker.prev",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "g j",
+        "command": "editor.action.marker.next",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    // Window Movement
+    {
+        "key": "w l",
+        "command": "workbench.action.focusRightGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "w h",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "w shift+l",
+        "command": "workbench.action.moveEditorToRightGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "w shift+h",
+        "command": "workbench.action.moveEditorToLeftGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "w c",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "w 0",
+        "command": "workbench.action.focusSideBar",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "w 1",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "w 2",
+        "command": "workbench.action.focusSecondEditorGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "w 3",
+        "command": "workbench.action.focusThirdEditorGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "w p",
+        "command": "workbench.actions.view.problems",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "alt+0",
+        "command": "workbench.action.focusSideBar"
+    },
+    {
+        "key": "alt+1",
+        "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "alt+2",
+        "command": "workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "alt+3",
+        "command": "workbench.action.focusThirdEditorGroup"
+    },
+    {
+        "key": "shift+alt+1",
+        "command": "workbench.action.moveEditorToFirstGroup"
+    },
+    {
+        "key": "alt+p",
+        "command": "workbench.actions.view.problems"
+    },
+    {
+        "key": "b h",
+        "command": "workbench.action.previousEditorInGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "b l",
+        "command": "workbench.action.nextEditorInGroup",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "b 1",
+        "command": "workbench.action.openEditorAtIndex1",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "b 2",
+        "command": "workbench.action.openEditorAtIndex2",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "b 3",
+        "command": "workbench.action.openEditorAtIndex3",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "b 4",
+        "command": "workbench.action.openEditorAtIndex4",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "b 5",
+        "command": "workbench.action.openEditorAtIndex5",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "workbench.action.openEditorAtIndex1"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "workbench.action.openEditorAtIndex2"
+    },
+    {
+        "key": "ctrl+3",
+        "command": "workbench.action.openEditorAtIndex3"
+    },
+    {
+        "key": "ctrl+4",
+        "command": "workbench.action.openEditorAtIndex4"
+    },
+    {
+        "key": "ctrl+5",
+        "command": "workbench.action.openEditorAtIndex5"
+    },
+    // Find
+    {
+        "key": "f k",
+        "command": "editor.action.previousSelectionMatchFindAction",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    {
+        "key": "f j",
+        "command": "editor.action.nextSelectionMatchFindAction",
+        "when": "editorTextFocus && modal.inNormalMode"
+    },
+    // Normal mode typing
+    {
+        "key": "enter",
+        "command": "default:type",
+        "when": "editorTextFocus && modal.inNormalMode",
+        "args": {
+            "text": "\n"
+        }
+    },
+    {
+        "key": "shift+9",
+        "command": "default:type",
+        "when": "editorTextFocus && modal.inNormalMode",
+        "args": {
+            "text": "("
+        }
+    },
+    {
+        "key": "shift+[",
+        "command": "default:type",
+        "when": "editorTextFocus && modal.inNormalMode",
+        "args": {
+            "text": "{"
+        }
+    },
+    {
+        "key": "[",
+        "command": "default:type",
+        "when": "editorTextFocus && modal.inNormalMode",
+        "args": {
+            "text": "["
+        }
+    },
+    {
+        "key": "'",
+        "command": "default:type",
+        "when": "editorTextFocus && modal.inNormalMode",
+        "args": {
+            "text": "'"
+        }
+    },
+    {
+        "key": "shift+'",
+        "command": "default:type",
+        "when": "editorTextFocus && modal.inNormalMode",
+        "args": {
+            "text": "\""
+        }
+    }
+]
