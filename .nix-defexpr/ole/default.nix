@@ -1,21 +1,28 @@
-let pkgs = import <nixpkgs> {};
+let
+  pkgs = import <nixpkgs> {};
 
-    config = import ./config.nix {
-      inherit (pkgs) bspwm rxvt_unicode firefox;
-      inherit dmenuLauncher;
-    };
+  config = import ./config.nix {
+    inherit (pkgs) bspwm rxvt_unicode firefox hsetroot;
+    inherit dmenuLauncher;
+  };
 
-    bspwmrc = import ./bspwmrc.nix (
-      { inherit (pkgs) stdenv writeText bspwm; } // config.bspwmrc
-    );
+  bspwmrc = import ./bspwmrc.nix (
+    { inherit (pkgs) stdenv writeText bspwm; } // config.bspwmrc
+  );
 
-    sxhkdrc = import ./sxhkdrc.nix (
-      { inherit (pkgs) stdenv writeText; } // config.sxhkdrc
-    );
+  sxhkdrc = import ./sxhkdrc.nix (
+    { inherit (pkgs) stdenv writeText; } // config.sxhkdrc
+  );
 
-    dmenuLauncher = import ./dmenu-launcher.nix (
-      { inherit (pkgs) stdenv writeText dmenu bspwm; } // config.dmenuLauncher
-    );
+  dmenuLauncher = import ./dmenu-launcher.nix (
+    { inherit (pkgs) stdenv writeText dmenu bspwm; } // config.dmenuLauncher
+  );
+
+  selectGhc = record: record.ghc8102;
+
+  localGhc = selectGhc pkgs.haskell.compiler;
+
+  localHaskellPackages = selectGhc pkgs.haskell.packages;
 
 in pkgs.buildEnv {
   name = "ole";
@@ -24,7 +31,7 @@ in pkgs.buildEnv {
     # Desktop environment
     rxvt_unicode
     rxvt_unicode.terminfo
-    vlc
+    # vlc
     firefox
     hsetroot
     dmenuLauncher
@@ -36,10 +43,8 @@ in pkgs.buildEnv {
     gimp
     pavucontrol
     scrot
-
-    # Steam
-    steam-run-native
-    steam
+    xorg.xmodmap
+    spotify
 
     # Themes
     arc-theme
@@ -62,6 +67,9 @@ in pkgs.buildEnv {
     wget
     curl
     killall
+    ansible
+    graphviz
+    xdot
 
     # Containers
     docker
@@ -74,12 +82,17 @@ in pkgs.buildEnv {
     vscode
 
     # Haskell
-    ghc
-    cabal-install
-    haskellPackages.ghcid
-    haskellPackages.ghcide
-    haskellPackages.hlint
-    haskellPackages.hoogle
-    haskellPackages.stylish-haskell
+    localGhc
+    localHaskellPackages.cabal-install
+    localHaskellPackages.ghcid
+    localHaskellPackages.ghcide
+    localHaskellPackages.hlint
+    localHaskellPackages.hoogle
+    localHaskellPackages.stylish-haskell
+    localHaskellPackages.ormolu
+    localHaskellPackages.floskell
+    localHaskellPackages.weeder
+    localHaskellPackages.graphmod
+    localHaskellPackages.haskell-language-server
   ];
 }

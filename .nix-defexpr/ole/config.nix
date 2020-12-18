@@ -2,7 +2,8 @@
   bspwm,
   rxvt_unicode,
   dmenuLauncher,
-  firefox
+  firefox,
+  hsetroot
 }:
 
 let
@@ -65,6 +66,11 @@ in {
     bottomPadding       = 1;
     leftPadding         = 1;
     rightPadding        = 1;
+    extraLines          = [
+      "${hsetroot}/bin/hsetroot"
+      "xset s off"
+      "xset -dpms"
+    ];
   };
 
   dmenuLauncher = {
