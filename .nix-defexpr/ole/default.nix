@@ -112,7 +112,6 @@ in pkgs.buildEnv {
         binutils
         unzip
         feh
-        taskell
         killall
         calc
         bind
