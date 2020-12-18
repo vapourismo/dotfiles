@@ -20,7 +20,6 @@
         100,
         120
     ],
-    "editor.fontSize": 13,
     "vsicons.dontShowNewVersionMessage": true,
     "hic.executablePath": "/home/ole/.nix-profile/bin/ghcide",
     "editor.renderLineHighlight": "all",
@@ -30,5 +29,23 @@
     "files.insertFinalNewline": true,
     "window.zoomLevel": 0,
     "editor.suggest.showWords": true,
-    "editor.wordBasedSuggestions": true
+    "editor.wordBasedSuggestions": true,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "workbench.editor.closeEmptyGroups": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "explorer.confirmDragAndDrop": false,
+    "keyboard.dispatch": "keyCode",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "dist-newstyle/": true,
+        "dist/": true
+    },
+    "haskell.formattingProvider": "stylish-haskell"
 }
